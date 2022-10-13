@@ -95,6 +95,7 @@ target_link_libraries(ElasticFusion
                       ${LAPACK_LIBRARIES}
                       lcm
                       lcmtypes_bot2-core
+		      bot_core_lcmtypes
 )
 
 
