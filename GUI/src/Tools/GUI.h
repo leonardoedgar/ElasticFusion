@@ -244,11 +244,11 @@ class GUI
 
             Eigen::Matrix3f Kinv = K.inverse();
 
-            pangolin::glDrawFrustrum(Kinv,
-                                     Resolution::getInstance().width(),
-                                     Resolution::getInstance().height(),
-                                     pose,
-                                     0.1f);
+            pangolin::glDrawFrustum(Kinv,
+                                    Resolution::getInstance().width(),
+                                    Resolution::getInstance().height(),
+                                    pose,
+                                    0.1f);
         }
 
         void displayImg(const std::string & id, GPUTexture * img)
