@@ -68,19 +68,19 @@ class GUI
             glDepthMask(GL_TRUE);
             glDepthFunc(GL_LESS);
 
-            s_cam = pangolin::OpenGlRenderState(pangolin::ProjectionMatrix(640, 480, 420, 420, 320, 240, 0.1, 1000),
+            s_cam = pangolin::OpenGlRenderState(pangolin::ProjectionMatrix(1280, 720, 905, 902, 654, 353, 0.1, 1000),
                                                 pangolin::ModelViewLookAt(0, 0, -1, 0, 0, 1, pangolin::AxisNegY));
 
-            pangolin::Display("cam").SetBounds(0, 1.0f, 0, 1.0f, -640 / 480.0)
+            pangolin::Display("cam").SetBounds(0, 1.0f, 0, 1.0f, -1280 / 720.0)
                                     .SetHandler(new pangolin::Handler3D(s_cam));
 
-            pangolin::Display(GPUTexture::RGB).SetAspect(640.0f / 480.0f);
+            pangolin::Display(GPUTexture::RGB).SetAspect(1280.0f / 720.0f);
 
-            pangolin::Display(GPUTexture::DEPTH_NORM).SetAspect(640.0f / 480.0f);
+            pangolin::Display(GPUTexture::DEPTH_NORM).SetAspect(1280.0f / 720.0f);
 
-            pangolin::Display("ModelImg").SetAspect(640.0f / 480.0f);
+            pangolin::Display("ModelImg").SetAspect(1280.0f / 720.0f);
 
-            pangolin::Display("Model").SetAspect(640.0f / 480.0f);
+            pangolin::Display("Model").SetAspect(1280.0f / 720.0f);
 
             std::vector<std::string> labels;
             labels.push_back(std::string("residual"));

@@ -35,7 +35,7 @@ MainController::MainController(int argc, char * argv[])
     std::string calibrationFile;
     Parse::get().arg(argc, argv, "-cal", calibrationFile);
 
-    Resolution::getInstance(640, 480);
+    Resolution::getInstance(1280, 720);
 
     if(calibrationFile.length())
     {
@@ -43,7 +43,7 @@ MainController::MainController(int argc, char * argv[])
     }
     else
     {
-        Intrinsics::getInstance(528, 528, 320, 240);
+        Intrinsics::getInstance(905, 902, 654, 353);
     }
 
     Parse::get().arg(argc, argv, "-l", logFile);
@@ -84,7 +84,7 @@ MainController::MainController(int argc, char * argv[])
     photoThresh = 115;
     fernThresh = 0.3095f;
 
-    timeDelta = 200;
+    timeDelta = 33;
     icpCountThresh = 40000;
     start = 1;
     so3 = !(Parse::get().arg(argc, argv, "-nso", empty) > -1);

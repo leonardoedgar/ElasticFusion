@@ -15,7 +15,7 @@
 class RealSenseInterface : public CameraInterface
 {
 public:
-  RealSenseInterface(int width = 640,int height = 480,int fps = 30);
+  RealSenseInterface(int width = 1280,int height = 720,int fps = 30);
   virtual ~RealSenseInterface();
 
   const int width,height,fps;
